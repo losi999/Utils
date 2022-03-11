@@ -1,0 +1,10 @@
+import { default as handler } from '@household/api/functions/%paramCase%/%paramCase%.handler';
+import { apiRequestValidator } from '@household/api/dependencies/handlers/api-request-validator-handler';
+import { %camelCase%ServiceFactory } from '@household/api/functions/%paramCase%/%paramCase%.service';
+import { cors } from '@household/api/dependencies/handlers/cors-handler';
+
+const %camelCase%Service = %camelCase%ServiceFactory();
+
+export default cors(apiRequestValidator({
+
+})(handler(%camelCase%Service)));

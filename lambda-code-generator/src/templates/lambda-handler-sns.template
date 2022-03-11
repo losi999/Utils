@@ -1,0 +1,15 @@
+import { I%pascalCase%Service } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+export default (%camelCase%: I%pascalCase%Service): AWSLambda.SNSHandler => {
+  return async (event) => {
+    try {
+      await Promise.all(event.Records.map((record) => {
+        const message = JSON.parse(record.Sns.Message);
+
+        return %camelCase%({});
+      }));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};

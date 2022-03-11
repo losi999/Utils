@@ -1,0 +1,11 @@
+import { I%pascalCase%Service } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+export default (%camelCase%: I%pascalCase%Service): AWSLambda.Handler => {
+  return async (event) => {
+    try {
+      return %camelCase%({});
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};

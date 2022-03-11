@@ -1,0 +1,12 @@
+import { I%pascalCase%Service, %camelCase%ServiceFactory } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+describe('%sentenceCase% service', () => {
+  let service: I%pascalCase%Service;
+
+  beforeEach(() => {
+    service = %camelCase%ServiceFactory();
+  });
+
+  it.todo('do the tests', async () => {
+  });
+});

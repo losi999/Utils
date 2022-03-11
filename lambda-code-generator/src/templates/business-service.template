@@ -1,0 +1,9 @@
+export interface I%pascalCase%Service {
+  (ctx: {}): Promise<void>;
+}
+
+export const %camelCase%ServiceFactory = (): I%pascalCase%Service => {
+  return async ({ }) => {
+
+  };
+};

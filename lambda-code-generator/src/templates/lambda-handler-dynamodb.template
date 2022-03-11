@@ -1,0 +1,17 @@
+import { I%pascalCase%Service } from '@household/api/functions/%paramCase%/%paramCase%.service';
+import { DynamoDB } from 'aws-sdk';
+
+export default (%camelCase%: I%pascalCase%Service): AWSLambda.DynamoDBStreamHandler => {
+  return async (event) => {
+    try {
+      await Promise.all(event.Records.map((record) => {
+        const newDocument = DynamoDB.Converter.unmarshall(record.dynamodb.NewImage);
+        const oldDocument = DynamoDB.Converter.unmarshall(record.dynamodb.OldImage);
+
+        return %camelCase%({});
+      }));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};

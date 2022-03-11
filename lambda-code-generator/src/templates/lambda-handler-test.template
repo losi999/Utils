@@ -1,0 +1,17 @@
+import { MockBusinessService } from '@household/shared/common/unit-testing';
+import { default as handler } from '@household/api/functions/%paramCase%/%paramCase%.handler';
+import { I%pascalCase%Service } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+describe('%sentenceCase% handler', () => {
+  let mock%pascalCase%Service: MockBusinessService<I%pascalCase%Service>;
+  let handlerFunction: ReturnType<typeof handler>;
+
+  beforeEach(() => {
+    mock%pascalCase%Service = jest.fn();
+    handlerFunction = handler(mock%pascalCase%Service);
+  });
+
+  it.todo('do the tests', async () => {
+
+  });
+});

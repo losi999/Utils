@@ -1,0 +1,6 @@
+import { default as handler } from '@household/api/functions/%paramCase%/%paramCase%.handler';
+import { %camelCase%ServiceFactory } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+const %camelCase%Service = %camelCase%ServiceFactory();
+
+export default handler(%camelCase%Service);

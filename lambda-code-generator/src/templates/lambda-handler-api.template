@@ -1,0 +1,20 @@
+import { I%pascalCase%Service } from '@household/api/functions/%paramCase%/%paramCase%.service';
+
+export default (%camelCase%: I%pascalCase%Service): AWSLambda.APIGatewayProxyHandler => {
+  return async (event) => {
+
+    try {
+      await %camelCase%({});
+    } catch (error) {
+      console.error(error);
+      return {
+        statusCode: error.statusCode,
+        body: error.message,
+      };
+    }
+    return {
+      statusCode: 200,
+      body: '',
+    };
+  };
+};
